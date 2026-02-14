@@ -48,7 +48,7 @@ if (-Not (Test-Path -Path "$env:TEMP\Inspector.exe")) {
 $path = "C:\ProgramData\NVIDIA Corporation\Drs"
 Get-ChildItem -Path $path -Recurse | Unblock-File
 # download inspector
-Get-FileFromWeb -URL "https://github.com/FR33THYFR33THY/files/raw/main/Inspector.exe" -File "$env:TEMP\Inspector.exe"
+Get-FileFromWeb -URL "https://github.com/o9-9/files-fr33thy/raw/main/Inspector.exe" -File "$env:TEMP\Inspector.exe"
 # enable nvidia legacy sharpen
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm\FTS" /v "EnableGR535" /t REG_DWORD /d "0" /f | Out-Null
 reg add "HKLM\SYSTEM\ControlSet001\Services\nvlddmkm\Parameters\FTS" /v "EnableGR535" /t REG_DWORD /d "0" /f | Out-Null

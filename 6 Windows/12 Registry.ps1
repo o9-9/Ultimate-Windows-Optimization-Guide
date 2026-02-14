@@ -38,7 +38,7 @@ Windows Registry Editor Version 5.00
 "NarratorCursorHighlight"=dword:00000000
 "CoupleNarratorCursorKeyboard"=dword:00000000
 
-; disable ease of access settings 
+; disable ease of access settings
 [HKEY_CURRENT_USER\Software\Microsoft\Ease of Access]
 "selfvoice"=dword:00000000
 "selfscan"=dword:00000000
@@ -335,9 +335,9 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
 "ListviewAlphaSelect"=dword:0
 
-; disable show window contents while dragging
+; enable show window contents while dragging
 [HKEY_CURRENT_USER\Control Panel\Desktop]
-"DragFullWindows"="0"
+"DragFullWindows"="1"
 
 ; enable smooth edges of screen fonts
 [HKEY_CURRENT_USER\Control Panel\Desktop]
@@ -400,11 +400,11 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\CPSS\Store\UserLocationOverridePrivacySetting]
 "Value"=dword:00000000
 
-; enable camera
+; disable camera
 [HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\webcam]
-"Value"="Allow"
+"Value"="Deny"
 
-; enable microphone 
+; enable microphone
 [Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\microphone]
 "Value"="Allow"
 
@@ -455,11 +455,11 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\radios]
 "Value"="Deny"
 
-; disable other devices 
+; disable other devices
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\bluetoothSync]
 "Value"="Deny"
 
-; app diagnostics 
+; app diagnostics
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\appDiagnostics]
 "Value"="Deny"
 
@@ -467,7 +467,7 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\documentsLibrary]
 "Value"="Deny"
 
-; disable downloads folder 
+; disable downloads folder
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\downloadsFolder]
 "Value"="Deny"
 
@@ -487,11 +487,11 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\broadFileSystemAccess]
 "Value"="Deny"
 
-; disable let websites show me locally relevant content by accessing my language list 
+; disable let websites show me locally relevant content by accessing my language list
 [HKEY_CURRENT_USER\Control Panel\International\User Profile]
 "HttpAcceptLanguageOptOut"=dword:00000001
 
-; disable let windows improve start and search results by tracking app launches  
+; disable let windows improve start and search results by tracking app launches
 [HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\EdgeUI]
 "DisableMFUTracking"=dword:00000001
 
@@ -518,7 +518,7 @@ Windows Registry Editor Version 5.00
 "NumberOfSIUFInPeriod"=dword:00000000
 "PeriodInNanoSeconds"=-
 
-; disable store my activity history on this device 
+; disable store my activity history on this device
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System]
 "PublishUserActivities"=dword:00000000
 
@@ -546,7 +546,7 @@ Windows Registry Editor Version 5.00
 
 
 ; EASE OF ACCESS
-; disable magnifier settings 
+; disable magnifier settings
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\ScreenMagnifier]
 "FollowCaret"=dword:00000000
 "FollowNarrator"=dword:00000000
@@ -591,9 +591,9 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Microsoft\GameBar]
 "GamepadNexusChordEnabled"=dword:00000000
 
-; enable game mode
+; disable game mode
 [HKEY_CURRENT_USER\Software\Microsoft\GameBar]
-"AutoGameModeEnabled"=dword:00000001
+"AutoGameModeEnabled"=dword:00000000
 
 ; other settings
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\GameDVR]
@@ -636,7 +636,7 @@ Windows Registry Editor Version 5.00
 
 
 
-; TIME & LANGUAGE 
+; TIME & LANGUAGE
 ; disable show the voice typing mic button
 [HKEY_CURRENT_USER\Software\Microsoft\input\Settings]
 "IsVoiceTypingKeyEnabled"=dword:00000000
@@ -695,13 +695,13 @@ Windows Registry Editor Version 5.00
 
 ; PERSONALIZATION
 ; solid color personalize your background
-[HKEY_CURRENT_USER\Control Panel\Desktop]
-"Wallpaper"=""
+; [HKEY_CURRENT_USER\Control Panel\Desktop]
+; "Wallpaper"=""
 
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Wallpapers]
-"BackgroundType"=dword:00000001
+; [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Wallpapers]
+; "BackgroundType"=dword:00000001
 
-; dark theme 
+; dark theme
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize]
 "AppsUseLightTheme"=dword:00000000
 "SystemUsesLightTheme"=dword:00000000
@@ -710,20 +710,21 @@ Windows Registry Editor Version 5.00
 "AppsUseLightTheme"=dword:00000000
 
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent]
-"StartColorMenu"=dword:ff3d3f41
-"AccentColorMenu"=dword:ff484a4c
-"AccentPalette"=hex(3):DF,DE,DC,00,A6,A5,A1,00,68,65,62,00,4C,4A,48,00,41,\
-3F,3D,00,27,25,24,00,10,0D,0D,00,10,7C,10,00
+"StartColorMenu"=dword:ffc06700
+"AccentColorMenu"=dword:ffd47800
+"AccentPalette"=hex:99,eb,ff,00,4c,c2,ff,00,00,91,f8,00,00,78,d4,00,00,67,c0,\
+  00,00,3e,92,00,00,1a,68,00,f7,63,0c,00
 
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\DWM]
 "EnableWindowColorization"=dword:00000001
-"AccentColor"=dword:ff484a4c
-"ColorizationColor"=dword:c44c4a48
-"ColorizationAfterglow"=dword:c44c4a48
+"AccentColor"=dword:ff47800
+"ColorizationColor"=dword:c40078d4
+"ColorizationAfterglow"=dword:c40078d4
+"AccentColorInactive"=dword:ff262626
 
 ; disable transparency
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize]
-"EnableTransparency"=dword:00000000
+; [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize]
+; "EnableTransparency"=dword:00000000
 
 ; always hide most used list in start menu
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Explorer]
@@ -767,15 +768,15 @@ Windows Registry Editor Version 5.00
 
 ; disable show recently opened items in start, jump lists and file explorer
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
-"Start_TrackDocs"=dword:00000000 
+"Start_TrackDocs"=dword:00000000
 
 ; left taskbar alignment
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
 "TaskbarAl"=dword:00000000
 
 ; remove chat from taskbar
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
-"TaskbarMn"=dword:00000000
+; [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+; "TaskbarMn"=dword:00000000
 
 ; remove task view from taskbar
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
@@ -786,7 +787,7 @@ Windows Registry Editor Version 5.00
 "SearchboxTaskbarMode"=dword:00000000
 
 ; remove windows widgets from taskbar
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Dsh] 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Dsh]
 "AllowNewsAndInterests"=dword:00000000
 
 ; remove copilot from taskbar
@@ -813,11 +814,11 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Microsoft\Lighting]
 "AmbientLightingEnabled"=dword:00000000
 
-; disable compatible apps in the forground always control lighting 
+; disable compatible apps in the forground always control lighting
 [HKEY_CURRENT_USER\Software\Microsoft\Lighting]
 "ControlledByForegroundApp"=dword:00000000
 
-; disable match my windows accent color 
+; disable match my windows accent color
 [HKEY_CURRENT_USER\Software\Microsoft\Lighting]
 "UseSystemAccentColor"=dword:00000000
 
@@ -953,9 +954,9 @@ E0,F6,C5,D5,0E,CA,50,00,00
 
 ; disable snap window settings
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
-"SnapAssist"=dword:00000000
-"DITest"=dword:00000000
-"EnableSnapBar"=dword:00000000
+"SnapAssist"=dword:00000001
+"DITest"=dword:00000001
+"EnableSnapBar"=dword:00000001
 "EnableTaskGroups"=dword:00000000
 "EnableSnapAssistFlyout"=dword:00000000
 "SnapFill"=dword:00000000
@@ -989,7 +990,7 @@ E0,F6,C5,D5,0E,CA,50,00,00
 ; EDGE
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge]
 "StartupBoostEnabled"=dword:00000000
-"HardwareAccelerationModeEnabled"=dword:00000000
+; "HardwareAccelerationModeEnabled"=dword:00000000
 "BackgroundModeEnabled"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MicrosoftEdgeElevationService]
@@ -1029,7 +1030,7 @@ E0,F6,C5,D5,0E,CA,50,00,00
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Dsh]
 "IsPrelaunchEnabled"=dword:00000000
 
-; disable web search in start menu 
+; disable web search in start menu
 [HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Explorer]
 "DisableSearchBoxSuggestions"=dword:00000001
 
@@ -1121,8 +1122,8 @@ E0,F6,C5,D5,0E,CA,50,00,00
 [-HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{0DB7E03F-FC29-4DC6-9020-FF41B59E513A}]
 
 ; remove quick access
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer]
-"HubMode"=dword:00000001
+; [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer]
+; "HubMode"=dword:00000001
 
 ; remove home
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{f874310e-b6b7-47dc-bc84-b9e6b38f5903}]
@@ -1136,8 +1137,8 @@ E0,F6,C5,D5,0E,CA,50,00,00
 @=""
 
 ; disable menu show delay
-[HKEY_CURRENT_USER\Control Panel\Desktop]
-"MenuShowDelay"="0"
+; [HKEY_CURRENT_USER\Control Panel\Desktop]
+; "MenuShowDelay"="0"
 
 ; disable driver searching & updates
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\DriverSearching]
@@ -1250,8 +1251,8 @@ schtasks /Change /DISABLE /TN "\Microsoft\Windows\Defrag\ScheduledDefrag" | Out-
 # import reg file
 Regedit.exe /S "$env:TEMP\Registry Optimize.reg"
 Clear-Host
-Write-Host "Restart to apply . . ."
-$null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+# Write-Host "Restart to apply . . ."
+# $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
 exit
 
       }
@@ -1640,7 +1641,7 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\webcam]
 "Value"="Allow"
 
-; microphone 
+; microphone
 [Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\microphone]
 "Value"="Allow"
 
@@ -1687,10 +1688,10 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\radios]
 "Value"="Allow"
 
-; other devices 
+; other devices
 [-HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\bluetoothSync]
 
-; app diagnostics 
+; app diagnostics
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\appDiagnostics]
 "Value"="Allow"
 
@@ -1698,7 +1699,7 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\documentsLibrary]
 "Value"="Allow"
 
-; downloads folder 
+; downloads folder
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\downloadsFolder]
 
 ; music library
@@ -1717,11 +1718,11 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\broadFileSystemAccess]
 "Value"="Allow"
 
-; let websites show me locally relevant content by accessing my language list 
+; let websites show me locally relevant content by accessing my language list
 [HKEY_CURRENT_USER\Control Panel\International\User Profile]
 "HttpAcceptLanguageOptOut"=-
 
-; let windows improve start and search results by tracking app launches  
+; let windows improve start and search results by tracking app launches
 [-HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\EdgeUI]
 
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\EdgeUI]
@@ -1744,7 +1745,7 @@ Windows Registry Editor Version 5.00
 ; feedback frequency
 [-HKEY_CURRENT_USER\SOFTWARE\Microsoft\Siuf]
 
-; store my activity history on this device 
+; store my activity history on this device
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System]
 "PublishUserActivities"=-
 
@@ -1772,7 +1773,7 @@ Windows Registry Editor Version 5.00
 
 
 ; EASE OF ACCESS
-; magnifier settings 
+; magnifier settings
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\ScreenMagnifier]
 "FollowCaret"=-
 "FollowNarrator"=-
@@ -1860,7 +1861,7 @@ Windows Registry Editor Version 5.00
 
 
 
-; TIME & LANGUAGE 
+; TIME & LANGUAGE
 ; show the voice typing mic button
 [HKEY_CURRENT_USER\Software\Microsoft\input\Settings]
 "IsVoiceTypingKeyEnabled"=-
@@ -1873,7 +1874,7 @@ Windows Registry Editor Version 5.00
 "EnableKeyAudioFeedback"=-
 "EnableDoubleTapSpace"=-
 
-; typing insights 
+; typing insights
 [HKEY_CURRENT_USER\Software\Microsoft\input\Settings]
 "InsightsEnabled"=-
 
@@ -1929,7 +1930,7 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Wallpapers]
 "BackgroundType"=dword:00000000
 
-; light theme 
+; light theme
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize]
 "AppsUseLightTheme"=dword:00000001
 "SystemUsesLightTheme"=dword:00000001
@@ -2029,11 +2030,11 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Microsoft\Lighting]
 "AmbientLightingEnabled"=dword:00000001
 
-; compatible apps in the forground always control lighting 
+; compatible apps in the forground always control lighting
 [HKEY_CURRENT_USER\Software\Microsoft\Lighting]
 "ControlledByForegroundApp"=-
 
-; match my windows accent color 
+; match my windows accent color
 [HKEY_CURRENT_USER\Software\Microsoft\Lighting]
 "UseSystemAccentColor"=dword:00000001
 
@@ -2247,7 +2248,7 @@ Windows Registry Editor Version 5.00
 
 [-HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Dsh]
 
-; web search in start menu 
+; web search in start menu
 [HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Explorer]
 "DisableSearchBoxSuggestions"=-
 
@@ -2280,7 +2281,7 @@ Windows Registry Editor Version 5.00
 
 
 ; POWER
-; park cpu cores 
+; park cpu cores
 [HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Power\PowerSettings\54533251-82be-4824-96c1-47b60b740d00\0cc5b647-c1df-4637-891a-dec35c318583]
 "ValueMax"=dword:00000000
 
@@ -2459,8 +2460,8 @@ schtasks /Change /ENABLE /TN "\Microsoft\Windows\Defrag\ScheduledDefrag" | Out-N
 # import reg file
 Regedit.exe /S "$env:TEMP\Registry Defaults.reg"
 Clear-Host
-Write-Host "Restart to apply . . ."
-$null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+# Write-Host "Restart to apply . . ."
+# $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
 exit
 
       }

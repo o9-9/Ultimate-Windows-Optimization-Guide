@@ -34,8 +34,8 @@ if ($key -notlike '*Configuration'){
 Get-ItemProperty -Path "Registry::$key" -Name 'RMHdcpKeyglobZero'
 }
 }
-Write-Host "Restart to apply . . ."
-$null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+# Write-Host "Restart to apply . . ."
+# $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
 exit
 
       }
@@ -59,8 +59,8 @@ if ($key -notlike '*Configuration'){
 Get-ItemProperty -Path "Registry::$key" -Name 'RMHdcpKeyglobZero'
 }
 }
-Write-Host "Restart to apply . . ."
-$null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+# Write-Host "Restart to apply . . ."
+# $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
 exit
 
       }

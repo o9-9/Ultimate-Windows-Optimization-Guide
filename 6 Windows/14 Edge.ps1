@@ -114,8 +114,8 @@ Get-AppxPackage -allusers *Microsoft.BingNews* | Remove-AppxPackage
 Get-AppxPackage -allusers *Microsoft.BingSearch* | Remove-AppxPackage
 Get-AppxPackage -allusers *Microsoft.BingWeather* | Remove-AppxPackage
 Clear-Host
-Write-Host "Restart to apply . . ."
-$null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+# Write-Host "Restart to apply . . ."
+# $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
 exit
 
       }
@@ -178,10 +178,10 @@ Get-AppXPackage -AllUsers *Microsoft.BingNews* | Foreach {Add-AppxPackage -Disab
 Get-AppXPackage -AllUsers *Microsoft.BingSearch* | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register -ErrorAction SilentlyContinue "$($_.InstallLocation)\AppXManifest.xml"}
 Get-AppXPackage -AllUsers *Microsoft.BingWeather* | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register -ErrorAction SilentlyContinue "$($_.InstallLocation)\AppXManifest.xml"}
 Clear-Host
-Write-Host "Restart to apply . . ."
-$null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+# Write-Host "Restart to apply . . ."
+# $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
 # open ublock origin in web browser
-Start-Process "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" "https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak"
+# Start-Process "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" "https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak"
 exit
 
       }

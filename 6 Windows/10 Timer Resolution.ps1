@@ -92,15 +92,15 @@ namespace WindowsService
             base.OnStop();
         }
         ManagementEventWatcher startWatch;
-        void startWatch_EventArrived(object sender, EventArrivedEventArgs e) 
+        void startWatch_EventArrived(object sender, EventArrivedEventArgs e)
         {
             try
             {
                 ManagementBaseObject process = (ManagementBaseObject)e.NewEvent.Properties["TargetInstance"].Value;
                 UInt32 processId = (UInt32)process.Properties["ProcessId"].Value;
                 this.ProcessStartDelegate.BeginInvoke(processId, null, null);
-            } 
-            catch(Exception ee) 
+            }
+            catch(Exception ee)
             {
                 if(null != this.EventLog)
                     try { this.EventLog.WriteEntry(ee.ToString(), EventLogEntryType.Warning); }
@@ -126,8 +126,8 @@ namespace WindowsService
                 processHandle = OpenProcess(SYNCHRONIZE, 0, processId);
                 if(processHandle != IntPtr.Zero)
                     WaitForSingleObject(processHandle, -1);
-            } 
-            catch(Exception ee) 
+            }
+            catch(Exception ee)
             {
                 if(null != this.EventLog)
                     try { this.EventLog.WriteEntry(ee.ToString(), EventLogEntryType.Warning); }
@@ -136,7 +136,7 @@ namespace WindowsService
             finally
             {
                 if(processHandle != IntPtr.Zero)
-                    CloseHandle(processHandle); 
+                    CloseHandle(processHandle);
             }
             SetDefaultResolution();
         }
@@ -200,7 +200,7 @@ namespace WindowsService
     {
         public WindowsServiceInstaller()
         {
-            ServiceProcessInstaller serviceProcessInstaller = 
+            ServiceProcessInstaller serviceProcessInstaller =
                                new ServiceProcessInstaller();
             ServiceInstaller serviceInstaller = new ServiceInstaller();
             serviceProcessInstaller.Account = ServiceAccount.LocalSystem;
@@ -225,7 +225,7 @@ New-Service -Name "Set Timer Resolution Service" -BinaryPathName "$env:SystemDri
 Set-Service -Name "Set Timer Resolution Service" -StartupType Auto -ErrorAction SilentlyContinue | Out-Null
 Set-Service -Name "Set Timer Resolution Service" -Status Running -ErrorAction SilentlyContinue | Out-Null
 # start taskmanager
-Start-Process taskmgr.exe
+# Start-Process taskmgr.exe
 exit
 
       }
@@ -239,7 +239,7 @@ sc.exe delete "Set Timer Resolution Service" | Out-Null
 # delete file
 Remove-Item "$env:SystemDrive\Windows\SetTimerResolutionService.exe" -Force -ErrorAction SilentlyContinue | Out-Null
 # start taskmanager
-Start-Process taskmgr.exe
+# Start-Process taskmgr.exe
 exit
 
       }

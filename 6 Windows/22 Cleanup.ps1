@@ -11,5 +11,15 @@
 Remove-Item -Path "$env:USERPROFILE\AppData\Local\Temp\*" -Recurse -Force -ErrorAction SilentlyContinue | Out-Null
 # clear temp folder
 Remove-Item -Path "$env:SystemDrive\Windows\Temp\*" -Recurse -Force -ErrorAction SilentlyContinue | Out-Null
-# open disk cleanup
-Start-Process cleanmgr.exe
+# Clear Prefetch
+Remove-Item -Path "$env:SystemRoot\Prefetch\*" -Recurse -Force -ErrorAction SilentlyContinue | Out-Null
+# Clear Internet Explorer Cache
+Remove-Item -Path "$env:LOCALAPPDATA\Microsoft\Windows\INetCache\*" -Recurse -Force -ErrorAction SilentlyContinue | Out-Null
+# Remove icon cache
+Stop-Process -Name explorer -Force
+Remove-Item -Path "$env:LOCALAPPDATA\IconCache.db" -Recurse -Force -ErrorAction SilentlyContinue | Out-Null
+Remove-Item -Path "$env:LOCALAPPDATA\Microsoft\Windows\Explorer\iconcache*" -Recurse -Force -ErrorAction SilentlyContinue | Out-Null
+Start-Process explorer.exe
+# Run Disk Cleanup on Drive C
+cleanmgr.exe /d C: /VERYLOWDISK
+Dism.exe /online /Cleanup-Image /StartComponentCleanup /ResetBase

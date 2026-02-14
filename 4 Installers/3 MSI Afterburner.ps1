@@ -46,7 +46,7 @@ Write-Host ""
 Write-Host "GPU 'Power' & 'Power Percent' disabled." -ForegroundColor Red
 Write-Host "This causes FPS and 1% low issues enabled." -ForegroundColor Red
 # download msi afterburner
-Get-FileFromWeb -URL "https://github.com/FR33THYFR33THY/files/raw/main/MSI Afterburner.exe" -File "$env:TEMP\MSI Afterburner.exe"
+Get-FileFromWeb -URL "https://github.com/o9-9/files-fr33thy/raw/main/MSI Afterburner.exe" -File "$env:TEMP\MSI Afterburner.exe"
 # install msi afterburner
 Start-Process -wait "$env:TEMP\MSI Afterburner.exe" -ArgumentList "/S"
 # new folder
@@ -316,7 +316,7 @@ AlarmAppCmdLine=
 EnableDataFiltering=0
 MaxLimit=8192
 MinLimit=0
-Group=GPU Mem           
+Group=GPU Mem
 Name=
 TrayTextColor=FF0000h
 TrayIconType=0

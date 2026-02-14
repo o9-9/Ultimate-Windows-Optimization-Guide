@@ -21,8 +21,8 @@ $MultilineComment = @"
 Windows Registry Editor Version 5.00
 
 ; black theme
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize]
-"EnableTransparency"=dword:00000000
+; [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize]
+; "EnableTransparency"=dword:00000000
 
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize]
 "AppsUseLightTheme"=dword:00000000
@@ -46,8 +46,8 @@ Windows Registry Editor Version 5.00
 "ColorizationColor"=dword:c4191919
 "ColorizationAfterglow"=dword:c4191919
 
-[HKEY_CURRENT_USER\Control Panel\Desktop]
-"WallPaper"=""
+; [HKEY_CURRENT_USER\Control Panel\Desktop]
+; "WallPaper"=""
 
 [HKEY_CURRENT_USER\Control Panel\Colors]
 "Background"="0 0 0"
@@ -75,8 +75,8 @@ $MultilineComment = @"
 Windows Registry Editor Version 5.00
 
 ; default theme
-[HKEY_CURRENT_USER\Control Panel\Desktop]
-"WallPaper"="C:\\Windows\\web\\wallpaper\\Windows\\img0.jpg"
+; [HKEY_CURRENT_USER\Control Panel\Desktop]
+; "WallPaper"="C:\\Windows\\web\\wallpaper\\Windows\\img0.jpg"
 
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Wallpapers]
 "BackgroundHistoryPath0"="C:\\Windows\\web\\wallpaper\\Windows\\img0.jpg"
@@ -106,8 +106,8 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize]
 "ColorPrevalence"=dword:00000000
 
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize]
-"EnableTransparency"=dword:00000001
+; [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize]
+; "EnableTransparency"=dword:00000001
 "@
 Set-Content -Path "$env:TEMP\DefaultTheme.reg" -Value $MultilineComment -Force
 # edit reg file

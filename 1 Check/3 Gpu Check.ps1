@@ -43,7 +43,7 @@
 
 Write-Host "Installing: Gpu Z . . ."
 # download gpuz
-Get-FileFromWeb -URL "https://github.com/FR33THYFR33THY/files/raw/main/Gpu%20Z.exe" -File "$env:TEMP\Gpu Z.exe"
+Get-FileFromWeb -URL "https://github.com/o9-9/files-fr33thy/raw/main/Gpu%20Z.exe" -File "$env:TEMP\Gpu Z.exe"
 # start gpuz
 Start-Process "$env:TEMP\Gpu Z.exe"
 Clear-Host

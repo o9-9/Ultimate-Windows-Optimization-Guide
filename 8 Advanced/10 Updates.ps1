@@ -158,9 +158,9 @@ Start-Process -wait "$env:TEMP\LGPO_30\lgpo.exe" -ArgumentList "/t $env:TEMP\LGP
 # update policies
 gpupdate /force | Out-Null
 Clear-Host
-Write-Host "Restart to apply . . ."
-$null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
-Start-Process ms-settings:windowsupdate
+# Write-Host "Restart to apply . . ."
+# $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+# Start-Process ms-settings:windowsupdate
 exit
 
       }
@@ -281,9 +281,9 @@ cmd /c "reg delete `"HKLM\SOFTWARE\Microsoft\WindowsUpdate\UpdatePolicy`" /f >nu
 # update policies
 gpupdate /force | Out-Null
 Clear-Host
-Write-Host "Restart to apply . . ."
-$null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
-Start-Process ms-settings:windowsupdate
+# Write-Host "Restart to apply . . ."
+# $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+# Start-Process ms-settings:windowsupdate
 exit
 
       }

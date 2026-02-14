@@ -87,7 +87,7 @@ exit
 Clear-Host
 Write-Host "Installing: 7Zip . . ."
 # download 7zip
-Get-FileFromWeb -URL "https://github.com/FR33THYFR33THY/files/raw/main/7 Zip.exe" -File "$env:TEMP\7 Zip.exe"
+Get-FileFromWeb -URL "https://github.com/o9-9/files-fr33thy/raw/main/7 Zip.exe" -File "$env:TEMP\7 Zip.exe"
 # install 7zip
 Start-Process -wait "$env:TEMP\7 Zip.exe" -ArgumentList "/S"
 show-menu
@@ -99,7 +99,7 @@ Clear-Host
 Write-Host "Installing: Battle.net . . ."
 # download battle.net
 Get-FileFromWeb -URL "https://downloader.battle.net/download/getInstaller?os=win&installer=Battle.net-Setup.exe" -File "$env:TEMP\Battle.net.exe"
-# install battle.net 
+# install battle.net
 Start-Process "$env:TEMP\Battle.net.exe" -ArgumentList '--lang=enUS --installpath="C:\Program Files (x86)\Battle.net"'
 # create battle.net shortcut
 $WshShell = New-Object -comObject WScript.Shell
@@ -151,7 +151,7 @@ show-menu
 Clear-Host
 Write-Host "Installing: Escape From Tarkov . . ."
 # download escape from tarkov
-Get-FileFromWeb -URL "https://prod.escapefromtarkov.com/launcher/download" -File "$env:TEMP\Escape From Tarkov.exe" 
+Get-FileFromWeb -URL "https://prod.escapefromtarkov.com/launcher/download" -File "$env:TEMP\Escape From Tarkov.exe"
 # install escape from tarkov
 Start-Process "$env:TEMP\Escape From Tarkov.exe"
 show-menu
@@ -177,11 +177,11 @@ Get-FileFromWeb -URL "https://dl.google.com/dl/chrome/install/googlechromestanda
 # install google chrome
 Start-Process -wait "$env:TEMP\Chrome.msi" -ArgumentList "/quiet"
 # add ublock origin lite
-Reg.exe add 'HKLM\SOFTWARE\Policies\Google\Chrome\ExtensionInstallForcelist' /v '1' /t REG_SZ /d 'ddkjiahejlhfcafbddmgiahcphecmpfh;https://clients2.google.com/service/update2/crx' /f | Out-Null
+#Reg.exe add 'HKLM\SOFTWARE\Policies\Google\Chrome\ExtensionInstallForcelist' /v '1' /t REG_SZ /d 'ddkjiahejlhfcafbddmgiahcphecmpfh;https://clients2.google.com/service/update2/crx' /f | Out-Null
 # add chrome policies
-cmd /c "reg add `"HKLM\SOFTWARE\Policies\Google\Chrome`" /v `"HardwareAccelerationModeEnabled`" /t REG_DWORD /d `"0`" /f >nul 2>&1"
+#cmd /c "reg add `"HKLM\SOFTWARE\Policies\Google\Chrome`" /v `"HardwareAccelerationModeEnabled`" /t REG_DWORD /d `"0`" /f >nul 2>&1"
 cmd /c "reg add `"HKLM\SOFTWARE\Policies\Google\Chrome`" /v `"BackgroundModeEnabled`" /t REG_DWORD /d `"0`" /f >nul 2>&1"
-cmd /c "reg add `"HKLM\SOFTWARE\Policies\Google\Chrome`" /v `"HighEfficiencyModeEnabled`" /t REG_DWORD /d `"1`" /f >nul 2>&1"
+#cmd /c "reg add `"HKLM\SOFTWARE\Policies\Google\Chrome`" /v `"HighEfficiencyModeEnabled`" /t REG_DWORD /d `"1`" /f >nul 2>&1"
 # remove logon chrome
 cmd /c "reg delete `"HKLM\Software\Microsoft\Active Setup\Installed Components\{8A69D345-D564-463c-AFF1-A69D9E530F96}`" /f >nul 2>&1"
 # disable chrome services
@@ -230,10 +230,11 @@ show-menu
 Clear-Host
 Write-Host "Installing: Notepad ++ . . ."
 # download notepad ++
-Get-FileFromWeb -URL "https://github.com/FR33THYFR33THY/files/raw/main/Notepad%20++.exe" -File "$env:TEMP\Notepad ++.exe"
+Get-FileFromWeb -URL "https://github.com/o9-9/files-fr33thy/raw/main/Notepad%20++.exe" -File "$env:TEMP\Notepad ++.exe"
 # install notepad ++
 Start-Process -wait "$env:TEMP\Notepad ++.exe" -ArgumentList "/S"
 # create config for notepad ++
+<#
 $MultilineComment = @"
 <?xml version="1.0" encoding="UTF-8" ?>
 <NotepadPlus>
@@ -315,6 +316,7 @@ $MultilineComment = @"
 
 "@
 Set-Content -Path "$env:AppData\Notepad++\config.xml" -Value $MultilineComment -Force
+#>
 show-menu
 
       }
@@ -379,7 +381,7 @@ Clear-Host
 Write-Host "Installing: Valorant . . ."
 # download valorant
 Get-FileFromWeb -URL "https://valorant.secure.dyn.riotcdn.net/channels/public/x/installer/current/live.live.ap.exe" -File "$env:TEMP\Valorant.exe"
-# install valorant 
+# install valorant
 Start-Process "$env:TEMP\Valorant.exe"
 show-menu
 

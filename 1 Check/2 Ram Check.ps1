@@ -43,7 +43,7 @@
 
 Write-Host "Installing: Cpu Z . . ."
 # download cpuz
-Get-FileFromWeb -URL "https://github.com/FR33THYFR33THY/files/raw/main/Cpu%20Z.exe" -File "$env:TEMP\Cpu Z.exe"
+Get-FileFromWeb -URL "https://github.com/o9-9/files-fr33thy/raw/main/Cpu%20Z.exe" -File "$env:TEMP\Cpu Z.exe"
 # start cpuz
 Start-Process "$env:TEMP\Cpu Z.exe"
 Clear-Host

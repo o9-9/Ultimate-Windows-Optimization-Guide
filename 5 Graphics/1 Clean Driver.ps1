@@ -43,7 +43,7 @@
 
 Write-Host "Installing: DDU . . ."
 # download ddu
-Get-FileFromWeb -URL "https://github.com/FR33THYFR33THY/files/raw/main/DDU.zip" -File "$env:TEMP\DDU.zip"
+Get-FileFromWeb -URL "https://github.com/o9-9/files-fr33thy/raw/main/DDU.zip" -File "$env:TEMP\DDU.zip"
 # extract files
 Expand-Archive "$env:TEMP\DDU.zip" -DestinationPath "$env:TEMP\DDU" -ErrorAction SilentlyContinue
 # create config for ddu

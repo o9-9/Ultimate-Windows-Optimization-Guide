@@ -6,7 +6,7 @@
 	$Host.PrivateData.ProgressBackgroundColor = "Black"
     $Host.PrivateData.ProgressForegroundColor = "White"
     Clear-Host
-	
+
 # pause updates
 $pause = (Get-Date).AddDays(365)
 $today = Get-Date
@@ -19,4 +19,4 @@ Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" -Nam
 Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" -Name "PauseQualityUpdatesStartTime" -Value $today -Force >$null
 Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" -Name "PauseUpdatesStartTime" -Value $today -Force >$null
 # open update settings
-Start-Process ms-settings:windowsupdate
+# Start-Process ms-settings:windowsupdate

@@ -113,9 +113,9 @@ Get-AppxPackage -allusers *Microsoft.XboxGameOverlay* | Remove-AppxPackage
 Get-AppxPackage -allusers *Microsoft.XboxGamingOverlay* | Remove-AppxPackage
 Get-AppxPackage -allusers *Microsoft.XboxIdentityProvider* | Remove-AppxPackage
 Get-AppxPackage -allusers *Microsoft.XboxSpeechToTextOverlay* | Remove-AppxPackage
-Write-Host "Restart to apply . . ."
-$null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
-Start-Process ms-settings:gaming-gamebar
+# Write-Host "Restart to apply . . ."
+# $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+# Start-Process ms-settings:gaming-gamebar
 exit
 
       }
@@ -181,8 +181,8 @@ Get-FileFromWeb -URL "https://aka.ms/GamingRepairTool" -File "$env:TEMP\GamingRe
 # start gamebar repair too
 Start-Process -wait "$env:TEMP\GamingRepairTool.exe"
 Clear-Host
-Write-Host "Restart to apply . . ."
-$null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+# Write-Host "Restart to apply . . ."
+# $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
 exit
 
       }

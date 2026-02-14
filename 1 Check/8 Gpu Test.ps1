@@ -43,7 +43,7 @@
 
 Write-Host "Installing: Furmark . . ."
 # download furmark
-Get-FileFromWeb -URL "https://github.com/FR33THYFR33THY/files/raw/main/Furmark.zip" -File "$env:TEMP\Furmark.zip"
+Get-FileFromWeb -URL "https://github.com/o9-9/files-fr33thy/raw/main/Furmark.zip" -File "$env:TEMP\Furmark.zip"
 # extract files
 Expand-Archive "$env:TEMP\Furmark.zip" -DestinationPath "$env:TEMP\Furmark" -ErrorAction SilentlyContinue
 # start furmark

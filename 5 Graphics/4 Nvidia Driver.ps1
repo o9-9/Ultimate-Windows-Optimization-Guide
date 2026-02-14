@@ -44,10 +44,10 @@
     Write-Host "1. Install: Nvidia Driver (Recommended)"
     Write-Host "2. Install: NvCleanInstall"
 	Write-Host ""
-	Write-Host "Unless recording or using replay buffer," -ForegroundColor Red 
+	Write-Host "Unless recording or using replay buffer," -ForegroundColor Red
 	Write-Host "avoid installing the NVIDIA App." -ForegroundColor Red
 	Write-Host ""
-	Write-Host "Game Filter (ALT+F3) and Statistics (ALT+R)," -ForegroundColor Red 
+	Write-Host "Game Filter (ALT+F3) and Statistics (ALT+R)," -ForegroundColor Red
 	Write-Host "will significantly reduce FPS when enabled." -ForegroundColor Red
     Write-Host ""
     Write-Host "In the NVIDIA App turn off," -ForegroundColor Red
@@ -81,7 +81,7 @@ Get-FileFromWeb -URL $url -File "$env:TEMP\NvidiaDriver.exe"
 Clear-Host
 Write-Host "Installing: Nvidia Driver . . ."
 # download 7zip
-Get-FileFromWeb -URL "https://github.com/FR33THYFR33THY/files/raw/main/7 Zip.exe" -File "$env:TEMP\7 Zip.exe"
+Get-FileFromWeb -URL "https://github.com/o9-9/files-fr33thy/raw/main/7 Zip.exe" -File "$env:TEMP\7 Zip.exe"
 # install 7zip
 Start-Process -wait "$env:TEMP\7 Zip.exe" /S
 # extract files with 7zip
@@ -96,7 +96,7 @@ exit
 Clear-Host
 Write-Host "Installing: NvCleanInstall . . ."
 # download nvcleaninstall
-Get-FileFromWeb -URL "https://github.com/FR33THYFR33THY/files/raw/main/NV%20Clean%20Install.exe" -File "$env:TEMP\NV Clean Install.exe"
+Get-FileFromWeb -URL "https://github.com/o9-9/files-fr33thy/raw/main/NV%20Clean%20Install.exe" -File "$env:TEMP\NV Clean Install.exe"
 # start nvcleaninstall
 Start-Process "$env:TEMP\NV Clean Install.exe"
 exit

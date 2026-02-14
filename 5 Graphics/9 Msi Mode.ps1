@@ -36,9 +36,9 @@ Write-Output "$instanceID"
 Write-Output "MSISupported: Not found or error accessing the registry."
 }
 }
-Write-Host ""
-Write-Host "Restart to apply . . ."
-$null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+# Write-Host ""
+# Write-Host "Restart to apply . . ."
+# $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
 exit
 
       }
@@ -65,9 +65,9 @@ Write-Output "$instanceID"
 Write-Output "MSISupported: Not found or error accessing the registry."
 }
 }
-Write-Host ""
-Write-Host "Restart to apply . . ."
-$null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+# Write-Host ""
+# Write-Host "Restart to apply . . ."
+# $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
 exit
 
       }
