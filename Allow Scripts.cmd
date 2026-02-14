@@ -15,7 +15,7 @@
 
     :menu
     cls
-    echo 1. Scripts: On (Recommended)
+    echo 1. Scripts: On
     echo 2. Scripts: Off
     set /p choice=:
     if "%choice%"=="1" goto A
@@ -32,8 +32,6 @@ reg add "HKLM\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell" /v 
 :: unblock all files in current directory
 cd %~dp0
 powershell -Command "Get-ChildItem -Path $PSScriptRoot -Recurse | Unblock-File"
-echo Enabled Powershell Scripts + Unblocked Files
-pause
 exit
 
     :B
@@ -45,6 +43,4 @@ reg delete "HKCR\ps1_auto_file" /f >nul 2>&1
 :: disallow powershell scripts
 reg add "HKCU\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell" /v "ExecutionPolicy" /t REG_SZ /d "Restricted" /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell" /v "ExecutionPolicy" /t REG_SZ /d "Restricted" /f >nul 2>&1
-echo Disabled Powershell Scripts
-pause
 exit
